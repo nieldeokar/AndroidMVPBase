@@ -1,24 +1,22 @@
 package com.skcsllp.mutterfly.manager;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.database.sqlite.SQLiteQueryBuilder;
 import android.util.Log;
+import com.skcsllp.mutterfly.data.db.IDbHelper;
 import com.skcsllp.mutterfly.models.UserModel;
+import io.reactivex.Observable;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Created by Nilesh Deokar on 7/9/2015.
  */
-public class DataBaseHelperNew extends SQLiteOpenHelper {
+public class DataBaseHelperNew extends SQLiteOpenHelper implements IDbHelper {
 
     public static final String TAG = "DataBaseHelperNew";
     // SQLiteDatabase database;
@@ -111,7 +109,7 @@ public class DataBaseHelperNew extends SQLiteOpenHelper {
     private AtomicInteger mOpenCounter = new AtomicInteger();
     private SQLiteDatabase mDatabase;
 
-    private DataBaseHelperNew(Context context) {
+    protected DataBaseHelperNew(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
@@ -559,4 +557,19 @@ public class DataBaseHelperNew extends SQLiteOpenHelper {
         return um;
     }
 
+    @Override public Observable<Long> insertUser(UserModel user) {
+        return null;
+    }
+
+    @Override public Observable<List<UserModel>> getAllUsers() {
+        return null;
+    }
+
+    @Override public Observable<Boolean> isQuestionEmpty() {
+        return null;
+    }
+
+    @Override public Observable<Boolean> isOptionEmpty() {
+        return null;
+    }
 }

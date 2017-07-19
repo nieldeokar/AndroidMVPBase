@@ -1,4 +1,4 @@
-package com.skcsllp.mutterfly.manager;
+package com.skcsllp.mutterfly.data.pref;
 
 import android.content.Context;
 import android.content.SharedPreferences;

@@ -27,7 +27,7 @@ import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.view.View;
 import com.skcsllp.mutterfly.manager.DataBaseHelperNew;
-import com.skcsllp.mutterfly.manager.PreferenceManager;
+import com.skcsllp.mutterfly.data.pref.PreferenceManager;
 import com.skcsllp.mutterfly.models.UserModel;
 
 /**
@@ -50,7 +50,9 @@ public class BasePresenter<V extends IBaseView> {
         mPreferenceManager = new PreferenceManager(context);
     }
 
-
+    public boolean isViewAttached() {
+        return mView != null;
+    }
     public void onCreate(){}
 
     public void attachView(V view){
