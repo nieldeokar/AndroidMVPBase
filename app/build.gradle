@@ -68,6 +68,7 @@ dependencies {
   compile "com.jakewharton:butterknife:${libs.butterknife}"
   compile "com.squareup.retrofit2:retrofit:${libs.retrofit}"
   compile "com.squareup.retrofit2:converter-gson:${libs.retrofit}"
+  compile "com.squareup.retrofit2:adapter-rxjava:${libs.rxjavaAdapter}"
 
 
   compile "com.github.bumptech.glide:glide:${libs.glide}"

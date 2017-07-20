@@ -98,15 +98,11 @@ public class AppDataManager implements DataManager {
     return null;
   }
 
-  @Override public Observable<List<UserModel>> getAllUsers() {
+  @Override public Observable<UserModel> getUserModel() {
     return null;
   }
 
-  @Override public Observable<Boolean> isQuestionEmpty() {
-    return null;
-  }
-
-  @Override public Observable<Boolean> isOptionEmpty() {
+  @Override public Observable<String> getUserId() {
     return null;
   }
 

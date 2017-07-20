@@ -8,10 +8,7 @@ public interface IDbHelper {
 
     Observable<Long> insertUser(final UserModel user);
 
-    Observable<List<UserModel>> getAllUsers();
+    Observable<UserModel> getUserModel();
 
-    Observable<Boolean> isQuestionEmpty();
-
-    Observable<Boolean> isOptionEmpty();
-
+    Observable<String> getUserId();
 }

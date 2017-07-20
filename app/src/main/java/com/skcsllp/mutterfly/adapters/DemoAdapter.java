@@ -18,54 +18,43 @@ import java.util.List;
  * Created by Niel on 18/07/17.
  */
 
-
-
 public class DemoAdapter extends BaseAdapter<Demo, DemoAdapter.DemoViewHolder> {
 
-	public DemoAdapter(Context context, List<Demo> data) {
-		super(context, data);
-	}
-  @Override
-	public final DemoViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+  public DemoAdapter(Context context, List<Demo> data) {
+    super(context, data);
+  }
 
-		return new DemoViewHolder(parent);
-	}
+  @Override public final DemoViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-	public class DemoViewHolder extends BaseViewHolder<Demo> {
+    return new DemoViewHolder(parent);
+  }
 
-		@BindView(R.id.textView) TextView tvName;
-		@BindView(R.id.imageView) ImageView ivUrl;
+  public class DemoViewHolder extends BaseViewHolder<Demo> {
 
+    @BindView(R.id.textView) TextView tvName;
+    @BindView(R.id.imageView) ImageView ivUrl;
 
-		public DemoViewHolder(ViewGroup parent) {
-			super(parent, R.layout.row_demo_layout);
+    public DemoViewHolder(ViewGroup parent) {
+      super(parent, R.layout.row_demo_layout);
 
+      ivUrl.setOnClickListener(new View.OnClickListener() {
+        @Override public void onClick(View v) {
 
-			ivUrl.setOnClickListener(new View.OnClickListener() {
-				@Override public void onClick(View v) {
+        }
+      });
+    }
 
-				}
-			});
+    @Override public void onBind(Demo item, int position) {
+      tvName.setText(item.name);
+      Glide.with(ivUrl.getContext()).load(item.url).into(ivUrl);
+    }
 
+    @Override public void onClick(View view, Demo item) {
+      Toast.makeText(getContext(), item.name, Toast.LENGTH_SHORT).show();
+    }
 
-		}
-
-		@Override
-		public void onBind(Demo item, int position) {
-			tvName.setText(item.name);
-			Glide.with(ivUrl.getContext()).load(item.url).into(ivUrl);
-		}
-
-		@Override
-		public void onClick(View view, Demo item) {
-			Toast.makeText(getContext(),item.name,Toast.LENGTH_SHORT).show();
-		}
-
-		@Override
-		public boolean onLongClick(View view, Demo item) {
-			return false;
-		}
-	}
-
-
+    @Override public boolean onLongClick(View view, Demo item) {
+      return false;
+    }
+  }
 }

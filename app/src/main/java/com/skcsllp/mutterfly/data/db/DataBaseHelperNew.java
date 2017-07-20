@@ -1,4 +1,4 @@
-package com.skcsllp.mutterfly.manager;
+package com.skcsllp.mutterfly.data.db;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -6,7 +6,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-import com.skcsllp.mutterfly.data.db.IDbHelper;
 import com.skcsllp.mutterfly.models.UserModel;
 import io.reactivex.Observable;
 import java.util.ArrayList;
@@ -488,7 +487,7 @@ public class DataBaseHelperNew extends SQLiteOpenHelper implements IDbHelper {
     }
 
 
-    public int getUserId() {
+    public Observable<String> getUserId() {
 
         String countQuery = "SELECT  " + KEY_USER_ID + " FROM " + TABLE_USER_NEW;
         SQLiteDatabase db = openWriteDatabase();
@@ -510,10 +509,10 @@ public class DataBaseHelperNew extends SQLiteOpenHelper implements IDbHelper {
             e.printStackTrace();
         }
 
-        return userID;
+        return null;
     }
 
-    public UserModel getUserModel() {
+    public Observable<UserModel> getUserModel() {
 
         SQLiteDatabase db = openWriteDatabase();
         //db.rawQuery("",new String []{});
@@ -554,22 +553,13 @@ public class DataBaseHelperNew extends SQLiteOpenHelper implements IDbHelper {
             e.printStackTrace();
         }
 
-        return um;
+        return null;
     }
 
     @Override public Observable<Long> insertUser(UserModel user) {
         return null;
     }
 
-    @Override public Observable<List<UserModel>> getAllUsers() {
-        return null;
-    }
 
-    @Override public Observable<Boolean> isQuestionEmpty() {
-        return null;
-    }
 
-    @Override public Observable<Boolean> isOptionEmpty() {
-        return null;
-    }
 }

@@ -6,8 +6,7 @@ import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.view.View;
-import com.skcsllp.mutterfly.data.AppDataManager;
-import com.skcsllp.mutterfly.manager.DataBaseHelperNew;
+import com.skcsllp.mutterfly.data.db.DataBaseHelperNew;
 import com.skcsllp.mutterfly.data.pref.PreferenceManager;
 import com.skcsllp.mutterfly.models.UserModel;
 

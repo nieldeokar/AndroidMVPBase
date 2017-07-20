@@ -1,9 +1,7 @@
 package com.skcsllp.mutterfly;
 
 import android.app.Application;
-import android.os.Handler;
 import com.crashlytics.android.Crashlytics;
-import com.skcsllp.mutterfly.manager.DataBaseHelperNew;
 import io.fabric.sdk.android.Fabric;
 
 /**
