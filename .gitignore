@@ -12,6 +12,7 @@ build/
 
 # Gradle files
 .gradle/
+gradle/
 
 
 # Mac files
