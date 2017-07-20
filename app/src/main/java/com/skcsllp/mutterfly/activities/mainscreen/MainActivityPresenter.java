@@ -8,8 +8,8 @@ import com.skcsllp.mutterfly.base.BasePresenter;
  * Created by Niel on 18/07/17.
  */
 
-public class MainActivityPresenter extends BasePresenter<MainActivityContract.IMainView> implements
-    MainActivityContract.MainPresenter {
+public class MainActivityPresenter extends BasePresenter<MainActivityContract.IMainView>
+    implements MainActivityContract.MainPresenter {
 
   public MainActivityPresenter(Context context) {
     super(context);
@@ -21,5 +21,13 @@ public class MainActivityPresenter extends BasePresenter<MainActivityContract.IM
 
   @Override public void showError(@StringRes int error) {
 
+  }
+
+  @Override public void onSubmitButtonClicked() {
+    mPreferenceManager.setCurrentUserName("Ganesh");
+  }
+
+  @Override public void onRetriveButtonClicked() {
+    mView.setUserName(mPreferenceManager.getCurrentUserName());
   }
 }

@@ -11,11 +11,14 @@ import com.skcsllp.mutterfly.base.IBaseView;
 public class MainActivityContract {
 
   public interface IMainView extends IBaseView {
-
+    void setUserName(String mUserName);
   }
 
 
   public interface MainPresenter extends IBasePresenter {
 
+    void onSubmitButtonClicked();
+
+    void onRetriveButtonClicked();
   }
 }

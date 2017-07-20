@@ -74,6 +74,13 @@ dependencies {
   compile "com.facebook.android:facebook-android-sdk:${libs.facebook}"
   compile "com.razorpay:checkout:${libs.razorpay}"
 
+  // reactive
+  compile "io.reactivex.rxjava2:rxjava:$libs.rxjava2Version"
+  compile "io.reactivex.rxjava2:rxandroid:$libs.rxandroidVersion"
+
+
+  // logger
+  compile "com.jakewharton.timber:timber:$libs.timberVersion"
 
 
   compile("com.crashlytics.sdk.android:crashlytics:${libs.crashlytics}") {

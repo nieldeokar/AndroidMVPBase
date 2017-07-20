@@ -26,6 +26,7 @@ import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.view.View;
+import com.skcsllp.mutterfly.data.AppDataManager;
 import com.skcsllp.mutterfly.manager.DataBaseHelperNew;
 import com.skcsllp.mutterfly.data.pref.PreferenceManager;
 import com.skcsllp.mutterfly.models.UserModel;
@@ -40,6 +41,8 @@ public class BasePresenter<V extends IBaseView> {
 
     protected Context mContext;
 
+    //protected AppDataManager mAppDataManager;
+
     protected DataBaseHelperNew mDbHelper;
 
     protected PreferenceManager mPreferenceManager;
@@ -48,6 +51,8 @@ public class BasePresenter<V extends IBaseView> {
         mContext = context;
         mDbHelper = DataBaseHelperNew.getInstance(context);
         mPreferenceManager = new PreferenceManager(context);
+
+        //mAppDataManager = new AppDataManager();
     }
 
     public boolean isViewAttached() {

@@ -2,11 +2,12 @@ package com.skcsllp.mutterfly.data.pref;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import com.skcsllp.mutterfly.data.DataManager;
 
 /**
  * Created by Nilesh Deokar on 03/09/15.
  */
-public class PreferenceManager {
+public class PreferenceManager implements IPreferenceHelper {
 
     public static final String USER_ID = "USER_ID";
     public static final String FIRST_NM = "fname";
@@ -148,6 +149,54 @@ public class PreferenceManager {
         editor.commit();
     }
 
+    @Override public int getCurrentUserLoggedInMode() {
+        return 0;
+    }
 
+    @Override public void setCurrentUserLoggedInMode(DataManager.LoggedInMode mode) {
+
+    }
+
+    @Override public Long getCurrentUserId() {
+        return null;
+    }
+
+    @Override public void setCurrentUserId(Long userId) {
+
+    }
+
+    @Override public String getCurrentUserName() {
+        return sharedPreferences.getString(FIRST_NM, null);
+    }
+
+    @Override public void setCurrentUserName(String userName) {
+         editor.putString(FIRST_NM,userName);
+         editor.commit();
+    }
+
+    @Override public String getCurrentUserEmail() {
+        return null;
+    }
+
+    @Override public void setCurrentUserEmail(String email) {
+
+    }
+
+    @Override public String getCurrentUserProfilePicUrl() {
+        return sharedPreferences.getString(USER_PROFILE_PIC,"");
+    }
+
+    @Override public void setCurrentUserProfilePicUrl(String profilePicUrl) {
+        editor.putString(USER_PROFILE_PIC,profilePicUrl);
+        editor.commit();
+    }
+
+    @Override public String getAccessToken() {
+        return null;
+    }
+
+    @Override public void setAccessToken(String accessToken) {
+
+    }
 }
 

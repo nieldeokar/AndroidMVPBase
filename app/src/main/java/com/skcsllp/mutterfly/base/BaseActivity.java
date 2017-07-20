@@ -53,8 +53,8 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ButterKnife.bind(this);
         mPresenter.attachView(this);
+
     }
 
     protected void initActionBar(boolean homeButtonEnable,String title){
