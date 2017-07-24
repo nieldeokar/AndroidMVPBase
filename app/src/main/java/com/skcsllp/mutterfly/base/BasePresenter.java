@@ -7,6 +7,7 @@ import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.view.View;
 import com.skcsllp.mutterfly.data.db.DataBaseHelperNew;
+import com.skcsllp.mutterfly.data.network.RetroClient;
 import com.skcsllp.mutterfly.data.pref.PreferenceManager;
 import com.skcsllp.mutterfly.models.UserModel;
 
@@ -19,8 +20,6 @@ public class BasePresenter<V extends IBaseView> {
     protected V mView;
 
     protected Context mContext;
-
-    //protected AppDataManager mAppDataManager;
 
     protected DataBaseHelperNew mDbHelper;
 

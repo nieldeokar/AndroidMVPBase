@@ -32,6 +32,22 @@ android {
     versionCode cfg.version_code
     versionName cfg.version_name
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+
+
+    File secretsExists = new File("secrets.properties")
+    if (secretsExists.exists()) {
+      def secretsFile = rootProject.file('secrets.properties')
+      def secrets = new Properties()
+      secrets.load(new FileInputStream(secretsFile))
+
+      buildConfigField "String", "BASE_URL", secrets.getProperty('BASE_URL')
+
+    } else {
+
+      buildConfigField "String", "BASE_URL", "\"Please update Base url.\""
+    }
+
   }
   buildTypes {
     release {
@@ -76,8 +92,8 @@ dependencies {
   compile "com.razorpay:checkout:${libs.razorpay}"
 
   // reactive
-  compile "io.reactivex.rxjava2:rxjava:$libs.rxjava2Version"
-  compile "io.reactivex.rxjava2:rxandroid:$libs.rxandroidVersion"
+//  compile "io.reactivex.rxjava2:rxjava:$libs.rxjava2Version"
+//  compile "io.reactivex.rxjava2:rxandroid:$libs.rxandroidVersion"
 
 
   // logger

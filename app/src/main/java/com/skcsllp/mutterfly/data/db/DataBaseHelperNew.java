@@ -7,7 +7,6 @@ import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 import com.skcsllp.mutterfly.models.UserModel;
-import io.reactivex.Observable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -487,7 +486,7 @@ public class DataBaseHelperNew extends SQLiteOpenHelper implements IDbHelper {
     }
 
 
-    public Observable<String> getUserId() {
+    public String getUserId() {
 
         String countQuery = "SELECT  " + KEY_USER_ID + " FROM " + TABLE_USER_NEW;
         SQLiteDatabase db = openWriteDatabase();
@@ -512,7 +511,7 @@ public class DataBaseHelperNew extends SQLiteOpenHelper implements IDbHelper {
         return null;
     }
 
-    public Observable<UserModel> getUserModel() {
+    public UserModel getUserModel() {
 
         SQLiteDatabase db = openWriteDatabase();
         //db.rawQuery("",new String []{});
@@ -556,7 +555,7 @@ public class DataBaseHelperNew extends SQLiteOpenHelper implements IDbHelper {
         return null;
     }
 
-    @Override public Observable<Long> insertUser(UserModel user) {
+    @Override public Long insertUser(UserModel user) {
         return null;
     }
 

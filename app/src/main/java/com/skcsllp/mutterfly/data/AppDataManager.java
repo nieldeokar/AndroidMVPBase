@@ -8,7 +8,6 @@ import com.skcsllp.mutterfly.data.network.model.LoginResponse;
 import com.skcsllp.mutterfly.data.network.model.LogoutResponse;
 import com.skcsllp.mutterfly.data.pref.IPreferenceHelper;
 import com.skcsllp.mutterfly.models.UserModel;
-import io.reactivex.Observable;
 import java.util.List;
 
 /**
@@ -94,34 +93,32 @@ public class AppDataManager implements DataManager {
 
   }
 
-  @Override public Observable<Long> insertUser(UserModel user) {
+  @Override public Long insertUser(UserModel user) {
     return null;
   }
 
-  @Override public Observable<UserModel> getUserModel() {
+  @Override public UserModel getUserModel() {
     return null;
   }
 
-  @Override public Observable<String> getUserId() {
+  @Override public String getUserId() {
+    return null;
+  }
+
+  @Override public LoginResponse doGoogleLoginApiCall(LoginRequest.GoogleLoginRequest request) {
+    return null;
+  }
+
+  @Override public LoginResponse doFacebookLoginApiCall(LoginRequest.FacebookLoginRequest request) {
     return null;
   }
 
   @Override
-  public Observable<LoginResponse> doGoogleLoginApiCall(LoginRequest.GoogleLoginRequest request) {
+  public LoginResponse doMutterflyLoginApiCall(LoginRequest.MutterflyLoginRequest request) {
     return null;
   }
 
-  @Override public Observable<LoginResponse> doFacebookLoginApiCall(
-      LoginRequest.FacebookLoginRequest request) {
-    return null;
-  }
-
-  @Override public Observable<LoginResponse> doMutterflyLoginApiCall(
-      LoginRequest.MutterflyLoginRequest request) {
-    return null;
-  }
-
-  @Override public Observable<LogoutResponse> doLogoutApiCall() {
+  @Override public LogoutResponse doLogoutApiCall() {
     return null;
   }
 }

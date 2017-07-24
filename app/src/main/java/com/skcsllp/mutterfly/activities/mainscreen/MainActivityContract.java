@@ -20,5 +20,7 @@ public class MainActivityContract {
     void onSubmitButtonClicked();
 
     void onRetriveButtonClicked();
+
+    void getDataFromAPI();
   }
 }

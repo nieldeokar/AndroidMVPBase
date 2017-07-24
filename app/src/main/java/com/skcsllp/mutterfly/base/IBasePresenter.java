@@ -8,9 +8,4 @@ import android.support.annotation.StringRes;
 
 public interface IBasePresenter {
 
-  void showError(String error);
-
-  void showError(@StringRes int error);
-
-
 }
