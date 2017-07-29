@@ -88,8 +88,8 @@ dependencies {
 
 
   compile "com.github.bumptech.glide:glide:${libs.glide}"
-  compile "com.facebook.android:facebook-android-sdk:${libs.facebook}"
-  compile "com.razorpay:checkout:${libs.razorpay}"
+
+
 
   // reactive
 //  compile "io.reactivex.rxjava2:rxjava:$libs.rxjava2Version"

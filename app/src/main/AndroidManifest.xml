@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.skcsllp.mutterfly">
+    package="com.niel.mvpdemo">
 
   <uses-permission android:name="android.permission.INTERNET"/>
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -17,17 +17,6 @@
       android:supportsRtl="true"
       android:theme="@style/AppTheme">
 
-    <meta-data
-        android:name="com.facebook.sdk.ApplicationId"
-        android:value="@string/facebook_app_id"/>
-    <meta-data
-        android:name="com.razorpay.ApiKey"
-        android:value="@string/razorpay_live"/>
-    <meta-data
-        android:name="com.crashlytics.ApiKey"
-        android:value="@string/crashlytics_live"/>
-
-
 
     <activity android:name=".activities.mainscreen.MainActivity">
       <intent-filter>
@@ -36,9 +25,6 @@
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
-      <meta-data
-            android:name="io.fabric.ApiKey"
-            android:value="2a7fb5294642a8b6ba24d6ab0697f02f074e762d" />
     </application>
 
 </manifest>

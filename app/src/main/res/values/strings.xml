@@ -1,12 +1,7 @@
 <resources>
-  <string name="app_name">Mutterfly</string>
+  <string name="app_name">SampleApp</string>
 
 
-  <string name="facebook_app_id">113256162358562</string>
-  <string name="fb_login_protocol_scheme">fb113256162358562</string>
-  <string name="razorpay_live">rzp_live_rbihTykary9CIx</string>
-  <string name="crashlytics_debug">20d4a51484a0a606040dec0528bcf1582d45020e</string>
-  <string name="crashlytics_live">2a7fb5294642a8b6ba24d6ab0697f02f074e762d</string>
 
 
   <string name="app_google_play_store_link">"https://play.google.com/store/apps/details?id="</string>
