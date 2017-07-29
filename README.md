@@ -6,9 +6,6 @@ This is demo base project build in MVP. You can use this project as a started to
 1. Clone the project
 2. Change the package name in `AndroidManifest.xml`, Project level `build.gradle` and replace `com.niel.mvpdemo` to yourPackage
 
-### invalidate cache of particular image.
-Glide uses LRU cache so we can not invalidate cache of particalur imageView but we can set the expiry time or last update time which would reload image from server.
-
 #### Libraries used
 * AppCompat
 * [Glide][1]
