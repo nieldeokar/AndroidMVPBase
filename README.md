@@ -1,5 +1,5 @@
 # AndroidMVPBase
-This is demo base project build in MVP. You can use this project as a started to any app. 
+This is demo base project build in MVP. You can use this project as a starter to any app. 
 
 
 ### Steps to use 
