@@ -41,17 +41,6 @@ public class MainActivity extends BaseActivity<MainActivityPresenter> implements
 
     }
 
-    @OnClick(R.id.button2)
-    void SubmitClick(View view){
-        mPresenter.onSubmitButtonClicked();
-    }
-
-
-    @OnClick(R.id.button3)
-    void RetriveClick(View view){
-        mPresenter.onRetriveButtonClicked();
-    }
-
     @Override public void setUserName(String mUserName) {
         mText.setText(mUserName);
     }

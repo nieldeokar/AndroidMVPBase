@@ -3,6 +3,7 @@
 buildscript {
   repositories {
     jcenter()
+    google()
   }
   dependencies {
     classpath 'com.android.tools.build:gradle:2.3.2'
@@ -17,6 +18,7 @@ allprojects {
   repositories {
     jcenter()
     mavenCentral()
+    google()
   }
 }
 
@@ -29,8 +31,8 @@ task clean(type: Delete) {
 ext {
   configuration = [
       package             : "com.niel.mvpdemo",
-      buildToolsVersion   : "25.0.1",
-      compileVersion      : 25,
+      buildToolsVersion   : "26.0.1",
+      compileVersion      : 26,
       minSdk              : 16,
       minSdk21            : 21,
       targetSdk           : 26,
@@ -39,7 +41,7 @@ ext {
   ]
 
   libraries = [
-      supportVersion      : "25.3.1",
+      supportVersion      : "26.0.1",
       retrofit            : "2.1.0",
       butterknife         : "8.7.0",
       glide               : "3.7.0",

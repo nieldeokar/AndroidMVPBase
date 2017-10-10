@@ -21,7 +21,7 @@ public interface RetrofitApiService {
         Call<LoginResponse> doFacebookLoginApiCall(@Body LoginRequest.FacebookLoginRequest request);
 
         @POST("/data")
-        Call<LoginResponse> doMutterflyLoginApiCall(@Body LoginRequest.MutterflyLoginRequest request);
+        Call<LoginResponse> doLoginApiCall(@Body LoginRequest.ServerLoginRequest request);
 
         @POST("/doLogout")
         Call<LogoutResponse> doLogoutApiCall();

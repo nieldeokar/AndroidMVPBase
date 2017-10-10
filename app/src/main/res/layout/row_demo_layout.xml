@@ -10,23 +10,17 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:text="TextView"
-      android:layout_marginLeft="82dp"
-      android:layout_marginStart="82dp"
-      android:layout_marginTop="61dp"
+      android:layout_marginTop="@dimen/padding_4dp"
       android:layout_below="@+id/imageView"
-      android:layout_alignLeft="@+id/imageView"
-      android:layout_alignStart="@+id/imageView"
+      android:gravity="center"
       />
   <ImageView
       android:id="@+id/imageView"
       android:layout_width="200dp"
       android:layout_height="200dp"
-      android:layout_marginTop="30dp"
+      android:layout_marginTop="@dimen/padding_4dp"
       app:srcCompat="?android:attr/actionModeCopyDrawable"
       android:layout_alignParentTop="true"
-      android:layout_alignParentLeft="true"
-      android:layout_alignParentStart="true"
-      android:layout_marginLeft="11dp"
-      android:layout_marginStart="11dp"
+      android:layout_centerInParent="true"
       />
 </RelativeLayout>

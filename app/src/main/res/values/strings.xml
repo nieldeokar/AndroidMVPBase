@@ -6,6 +6,7 @@
 
   <string name="app_google_play_store_link">"https://play.google.com/store/apps/details?id="</string>
   <string name="app_market_link">"market://details?id="</string>
+  <string name="app_crashlytics_id">"id1212421nasf"</string>
 
   <string name="api_retry_error">Please retry!</string>
   <string name="api_default_error">Something wrong happened!</string>

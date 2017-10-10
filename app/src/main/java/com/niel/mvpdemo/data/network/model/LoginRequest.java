@@ -13,7 +13,7 @@ public class LoginRequest {
         // This class is not publicly instantiable
     }
 
-    public static class MutterflyLoginRequest {
+    public static class ServerLoginRequest {
         @Expose
         @SerializedName("email")
         private String email;
@@ -22,7 +22,7 @@ public class LoginRequest {
         @SerializedName("password")
         private String password;
 
-        public MutterflyLoginRequest(String email, String password) {
+        public ServerLoginRequest(String email, String password) {
             this.email = email;
             this.password = password;
         }
@@ -48,7 +48,7 @@ public class LoginRequest {
             if (this == object) return true;
             if (object == null || getClass() != object.getClass()) return false;
 
-            MutterflyLoginRequest that = (MutterflyLoginRequest) object;
+            ServerLoginRequest that = (ServerLoginRequest) object;
 
             if (email != null ? !email.equals(that.email) : that.email != null) return false;
             return password != null ? password.equals(that.password) : that.password == null;

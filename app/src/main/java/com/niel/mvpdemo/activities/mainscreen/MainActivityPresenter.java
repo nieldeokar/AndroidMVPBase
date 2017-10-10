@@ -30,7 +30,7 @@ public class MainActivityPresenter extends BasePresenter<MainActivityContract.IM
   @Override public void getDataFromAPI() {
 
     RetroClient.getRetroClient()
-        .doMutterflyLoginApiCall(new LoginRequest.MutterflyLoginRequest("rs@rs.rs", "rs"))
+        .doLoginApiCall(new LoginRequest.ServerLoginRequest("rs@rs.rs", "rs"))
         .enqueue(new RemoteCallback<LoginResponse>() {
           @Override public void onSuccess(LoginResponse response) {
 
